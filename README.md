@@ -148,6 +148,10 @@ Gemini made all 28 post-warm-up decisions itself (0 fallbacks); its replies are 
 router sends each message to an **Order Status**, **Refunds & Returns**, or **Product Recommendation**
 agent, each with its own tools, and `MemorySaver` keeps the conversation across turns.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Shacxify/BUS4118S---Agentic-AI-in-Marketing/blob/ad-optimization-agent/chatbot/chatbot_demo.ipynb)
+
+Run it in your browser with the button above (add `GEMINI_API_KEY` under Colab's 🔑 Secrets first), or locally:
+
 ```powershell
 .\.venv\Scripts\python.exe -m chatbot.chat     # interactive chat (order numbers RC-1001 to RC-1004)
 .\.venv\Scripts\python.exe -m chatbot.demo     # scripted demo -> chatbot/outputs/demo_transcript.md

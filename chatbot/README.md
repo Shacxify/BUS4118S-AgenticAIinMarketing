@@ -1,5 +1,6 @@
 # Ridgeline Coffee Co. Customer Assistant (Agentic AI Chatbot)
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Shacxify/BUS4118S---Agentic-AI-in-Marketing/blob/ad-optimization-agent/chatbot/chatbot_demo.ipynb)
 [![Course](https://img.shields.io/badge/SJSU-BUS4%20118S-0055A2)](../README.md)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.x-1C3C3C?logo=langchain&logoColor=white)](https://langchain-ai.github.io/langgraph/)
@@ -58,6 +59,18 @@ Store data (4 orders, 9 coffees, refund policy) is mock data in [`data.py`](data
 Oct 26, 2026, so refund-window results are the same every run.
 
 ## Run it
+
+### In Google Colab (no setup)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Shacxify/BUS4118S---Agentic-AI-in-Marketing/blob/ad-optimization-agent/chatbot/chatbot_demo.ipynb)
+
+1. Click the button to open [`chatbot_demo.ipynb`](chatbot_demo.ipynb) in Colab.
+2. Click the 🔑 **Secrets** icon in the left sidebar, add `GEMINI_API_KEY` with your
+   [Google AI Studio key](https://aistudio.google.com/apikey), and turn on **Notebook access**.
+3. Choose **Runtime → Run all**. The notebook clones this repo, installs the dependencies, runs the
+   five-turn demo, shows what `MemorySaver` stored, and ends with an interactive chat.
+
+### Locally
 
 From the project root, using the project's virtual environment (Python 3.10+):
 
