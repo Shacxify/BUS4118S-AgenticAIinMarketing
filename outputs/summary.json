@@ -1,0 +1,148 @@
+{
+  "main_run": {
+    "oracle": {
+      "conversions": 1188,
+      "spend": 29999.98,
+      "cpa": 25.25,
+      "ctr_pct": 1.033,
+      "cvr_pct": 4.357,
+      "share_to_best_channel_pct": 81.4,
+      "guardrail_interventions": 0,
+      "llm_decisions": 0,
+      "fallback_decisions": 0,
+      "regret_vs_oracle": 0
+    },
+    "gemini": {
+      "conversions": 1064,
+      "spend": 30000.0,
+      "cpa": 28.2,
+      "ctr_pct": 0.751,
+      "cvr_pct": 3.429,
+      "share_to_best_channel_pct": 48.7,
+      "guardrail_interventions": 7,
+      "llm_decisions": 28,
+      "fallback_decisions": 0,
+      "regret_vs_oracle": 124
+    },
+    "equal_split": {
+      "conversions": 999,
+      "spend": 30000.0,
+      "cpa": 30.03,
+      "ctr_pct": 0.608,
+      "cvr_pct": 2.637,
+      "share_to_best_channel_pct": 33.3,
+      "guardrail_interventions": 0,
+      "llm_decisions": 0,
+      "fallback_decisions": 0,
+      "regret_vs_oracle": 189
+    },
+    "heuristic": {
+      "conversions": 1012,
+      "spend": 30000.0,
+      "cpa": 29.64,
+      "ctr_pct": 0.829,
+      "cvr_pct": 3.776,
+      "share_to_best_channel_pct": 46.9,
+      "guardrail_interventions": 14,
+      "llm_decisions": 0,
+      "fallback_decisions": 0,
+      "regret_vs_oracle": 176
+    },
+    "thompson": {
+      "conversions": 1102,
+      "spend": 30000.0,
+      "cpa": 27.22,
+      "ctr_pct": 0.744,
+      "cvr_pct": 3.481,
+      "share_to_best_channel_pct": 58.0,
+      "guardrail_interventions": 20,
+      "llm_decisions": 0,
+      "fallback_decisions": 0,
+      "regret_vs_oracle": 86
+    }
+  },
+  "multi_seed": [
+    {
+      "strategy": "oracle",
+      "runs": 20,
+      "conversions_mean": 1162.0,
+      "conversions_sd": 54.2,
+      "cpa_mean": 25.9,
+      "regret_mean": 0.0,
+      "share_to_best_pct": 81.4,
+      "lift_vs_equal_pct": 18.7
+    },
+    {
+      "strategy": "gemini",
+      "runs": 3,
+      "conversions_mean": 1059.0,
+      "conversions_sd": 28.8,
+      "cpa_mean": 28.3,
+      "regret_mean": 133.0,
+      "share_to_best_pct": 49.1,
+      "lift_vs_equal_pct": 5.8
+    },
+    {
+      "strategy": "heuristic",
+      "runs": 20,
+      "conversions_mean": 1025.3,
+      "conversions_sd": 47.6,
+      "cpa_mean": 29.3,
+      "regret_mean": 136.7,
+      "share_to_best_pct": 48.7,
+      "lift_vs_equal_pct": 4.8
+    },
+    {
+      "strategy": "thompson",
+      "runs": 20,
+      "conversions_mean": 1070.0,
+      "conversions_sd": 48.8,
+      "cpa_mean": 28.1,
+      "regret_mean": 92.0,
+      "share_to_best_pct": 55.6,
+      "lift_vs_equal_pct": 9.3
+    },
+    {
+      "strategy": "equal_split",
+      "runs": 20,
+      "conversions_mean": 978.8,
+      "conversions_sd": 35.3,
+      "cpa_mean": 30.7,
+      "regret_mean": 183.2,
+      "share_to_best_pct": 33.3,
+      "lift_vs_equal_pct": 0.0
+    }
+  ],
+  "gemini_seeds_like_for_like": [
+    {
+      "strategy": "oracle",
+      "conversions_mean": 1192.0,
+      "cpa_mean": 25.2,
+      "lift_vs_equal_pct": 19.0
+    },
+    {
+      "strategy": "gemini",
+      "conversions_mean": 1059.0,
+      "cpa_mean": 28.3,
+      "lift_vs_equal_pct": 5.8
+    },
+    {
+      "strategy": "heuristic",
+      "conversions_mean": 1045.7,
+      "cpa_mean": 28.7,
+      "lift_vs_equal_pct": 4.4
+    },
+    {
+      "strategy": "thompson",
+      "conversions_mean": 1081.3,
+      "cpa_mean": 27.8,
+      "lift_vs_equal_pct": 8.0
+    },
+    {
+      "strategy": "equal_split",
+      "conversions_mean": 1001.3,
+      "cpa_mean": 30.0,
+      "lift_vs_equal_pct": 0.0
+    }
+  ]
+}

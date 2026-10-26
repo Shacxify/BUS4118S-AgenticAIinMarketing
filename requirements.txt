@@ -1,0 +1,10 @@
+pandas>=2.0
+numpy>=1.26
+matplotlib>=3.8
+tabulate>=0.9
+google-genai>=1.0
+langgraph>=1.0
+langchain-google-genai>=4.0
+python-dotenv>=1.0
+pytest>=8.0
+jupyter>=1.0
