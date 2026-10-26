@@ -1,5 +1,12 @@
 # Ridgeline Coffee Co. Customer Assistant (Agentic AI Chatbot)
 
+[![Course](https://img.shields.io/badge/SJSU-BUS4%20118S-0055A2)](../README.md)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-1.x-1C3C3C?logo=langchain&logoColor=white)](https://langchain-ai.github.io/langgraph/)
+[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-API-8E75B2?logo=googlegemini&logoColor=white)](https://ai.google.dev/)
+[![Memory](https://img.shields.io/badge/memory-MemorySaver-6E56CF)](graph.py)
+[![Tested with pytest](https://img.shields.io/badge/tested%20with-pytest-0A9EDC?logo=pytest&logoColor=white)](../tests/test_chatbot.py)
+
 A multi-agent customer service and sales chatbot built with **LangGraph** and **Google Gemini**. "Ridge"
 helps customers of Ridgeline Coffee Co., a fictional direct-to-consumer coffee roaster (the same kind of
 brand whose Search/Social/Display budget the [Ad Optimization Agent](../README.md) manages), check orders,
