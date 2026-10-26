@@ -1,0 +1,34 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	router(router)
+	order_status(order_status)
+	order_status_tools(order_status_tools)
+	refund(refund)
+	refund_tools(refund_tools)
+	product_recommendation(product_recommendation)
+	product_recommendation_tools(product_recommendation_tools)
+	general(general)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> router;
+	order_status -.-> __end__;
+	order_status -. &nbsp;tools&nbsp; .-> order_status_tools;
+	order_status_tools --> order_status;
+	product_recommendation -.-> __end__;
+	product_recommendation -. &nbsp;tools&nbsp; .-> product_recommendation_tools;
+	product_recommendation_tools --> product_recommendation;
+	refund -.-> __end__;
+	refund -. &nbsp;tools&nbsp; .-> refund_tools;
+	refund_tools --> refund;
+	router -.-> general;
+	router -.-> order_status;
+	router -.-> product_recommendation;
+	router -.-> refund;
+	general --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
