@@ -7,12 +7,13 @@
 [![Jupyter](https://img.shields.io/badge/Jupyter-notebook-F37626?logo=jupyter&logoColor=white)](notebook.ipynb)
 [![Tested with pytest](https://img.shields.io/badge/tested%20with-pytest-0A9EDC?logo=pytest&logoColor=white)](tests/)
 
-Agentic AI projects for **BUS4 118S: Agentic AI in Marketing**, both powered by Google Gemini.
+Agentic AI projects for **BUS4 118S: Agentic AI in Marketing**, all powered by Google Gemini.
 
 | Project | What it does | Docs |
 |---|---|---|
 | **Ad Optimization Agent** | Splits a daily ad budget across Search, Social and Display to maximize conversions, with guardrails enforced in code | This page |
 | **Customer Service Chatbot** | A LangGraph multi-agent assistant for order status, refunds and product recommendations, with `MemorySaver` conversation memory | [`chatbot/README.md`](chatbot/README.md) |
+| **Supply Chain Assistant** | A LangGraph multi-agent assistant for inventory and stockout forecasts, inbound shipment tracking, and supplier comparison and purchase orders, with `MemorySaver` conversation memory | [`supplychain/README.md`](supplychain/README.md) |
 
 ## Contents
 
@@ -24,6 +25,7 @@ Agentic AI projects for **BUS4 118S: Agentic AI in Marketing**, both powered by 
   - [Results](#results)
   - [Key findings](#key-findings)
 - [Customer Service Chatbot](#customer-service-chatbot)
+- [Supply Chain Assistant](#supply-chain-assistant)
 - [Repository layout](#repository-layout)
 
 ---
@@ -161,16 +163,34 @@ Architecture, requirement mapping and the demo transcript are in [`chatbot/READM
 
 ---
 
+## Supply Chain Assistant
+
+"Atlas" is the supply chain assistant for Ridgeline Coffee Co.'s operations team, built with **LangGraph**
+and **Gemini**. A router sends each message to an **Inventory & Demand**, **Logistics**, or **Procurement**
+agent, each with its own tools, and `MemorySaver` keeps the conversation across turns.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Shacxify/BUS4118S-AgenticAIinMarketing/blob/main/supplychain/supplychain_demo.ipynb)
+
+```powershell
+.\.venv\Scripts\python.exe -m supplychain.chat     # interactive chat (items: Brazil, Colombia, bags...; POs PO-2207, PO-2211)
+.\.venv\Scripts\python.exe -m supplychain.demo     # scripted demo -> supplychain/outputs/demo_transcript.md
+```
+
+Architecture, requirement mapping and the demo transcript are in [`supplychain/README.md`](supplychain/README.md).
+
+---
+
 ## Repository layout
 
 ```
 adagent/            Ad agent: config, simulator, tools, guardrails, policies, Gemini client, agent loop
 chatbot/            Customer service chatbot: graph, agents, tools, prompts, mock data, demo outputs
+supplychain/        Supply chain assistant: graph, agents, tools, prompts, mock data, demo outputs
 prompts/            Ad agent system prompt
 data/               ad_performance.csv
 outputs/            Ad agent results: decision logs, results.md, summary.json, charts, Gemini cache
 docs/               design_doc.md, scaling_note.md
-tests/              Guardrail and chatbot tests
-scripts/            build_notebook.py
+tests/              Guardrail, chatbot and supply chain tests
+scripts/            Notebook builders
 generate_data.py    propose.py    evaluate.py    notebook.ipynb
 ```
