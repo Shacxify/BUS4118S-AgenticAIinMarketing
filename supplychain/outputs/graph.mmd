@@ -1,0 +1,34 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	router(router)
+	inventory(inventory)
+	inventory_tools(inventory_tools)
+	logistics(logistics)
+	logistics_tools(logistics_tools)
+	procurement(procurement)
+	procurement_tools(procurement_tools)
+	general(general)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> router;
+	inventory -.-> __end__;
+	inventory -. &nbsp;tools&nbsp; .-> inventory_tools;
+	inventory_tools --> inventory;
+	logistics -.-> __end__;
+	logistics -. &nbsp;tools&nbsp; .-> logistics_tools;
+	logistics_tools --> logistics;
+	procurement -.-> __end__;
+	procurement -. &nbsp;tools&nbsp; .-> procurement_tools;
+	procurement_tools --> procurement;
+	router -.-> general;
+	router -.-> inventory;
+	router -.-> logistics;
+	router -.-> procurement;
+	general --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
