@@ -8,8 +8,8 @@ The notebook runs both in Google Colab (clones the repo, reads the key from Cola
 """
 import nbformat as nbf
 
-REPO = "Shacxify/BUS4118S---Agentic-AI-in-Marketing"
-BRANCH = "ad-optimization-agent"
+REPO = "Shacxify/BUS4118S-AgenticAIinMarketing"
+BRANCH = "main"
 PATH = "chatbot/chatbot_demo.ipynb"
 COLAB_URL = f"https://colab.research.google.com/github/{REPO}/blob/{BRANCH}/{PATH}"
 
@@ -36,9 +36,9 @@ Then choose *Runtime → Run all*."""),
 
 IN_COLAB = "google.colab" in sys.modules
 if IN_COLAB:
-    if not os.path.exists("BUS4118S---Agentic-AI-in-Marketing"):
+    if not os.path.exists("BUS4118S-AgenticAIinMarketing"):
         !git clone -q --branch {BRANCH} https://github.com/{REPO}.git
-    %cd BUS4118S---Agentic-AI-in-Marketing
+    %cd BUS4118S-AgenticAIinMarketing
     !pip install -q "langgraph>=1.0" "langchain-google-genai>=4.0" python-dotenv
 elif os.path.basename(os.getcwd()) == "chatbot":
     os.chdir("..")   # work from the repo root
